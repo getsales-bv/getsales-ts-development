@@ -4,6 +4,19 @@ Drop-in config files and coding conventions for TypeScript projects. Copy them i
 
 These are based on the rules and skills used to develop our webshops. The aim is to keep code consistent across codebases, whether built in-house or by external developers.
 
+## Rules at a glance
+
+The full list is in `AGENTS.md`.
+
+- **Formatting:** Prettier decides. 2-space indent, double quotes, trailing commas, imports sorted automatically.
+- **Strict TypeScript:** no `any`, no non-null assertions (`!`), no weakening compiler settings to make code compile.
+- **Imports:** `import type` for types only. `@/` for imports across folders, relative paths within a folder.
+- **Unused names:** prefix with `_` when intentionally unused.
+- **Code:** small single-purpose modules, kebab-case file names, early returns, validate external input at the boundary.
+- **Secrets:** never commit `.env` files or keys.
+- **Tests:** test real behaviour through the public caller, not implementation details.
+- **Done means:** formatting, lint (zero warnings) and type checks all pass.
+
 ## Files
 
 | File                                  | Purpose                                                                                                |
